@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yuvraj Dhage — Data Analyst &amp; IoT Developer</title>
+<meta name="description" content="Portfolio of Yuvraj Dhage — Data Science graduate (B.Tech), Data Analyst and IoT Developer building dashboards, telemetry systems and data-driven tools. Open to job and internship opportunities." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#top" class="visually-hidden">Skip to content</a>
+<div class="grain"></div>
+<div class="probe is-hidden" id="probe" aria-hidden="true"></div>
+
+<!-- ===== TRACE RAIL (scroll progress instrument) ===== -->
+<div class="trace-rail" id="traceRail" aria-hidden="true">
+  <div class="trace-rail__track"></div>
+  <div class="trace-rail__fill" id="traceFill"></div>
+  <div class="trace-rail__dots" id="traceDots"></div>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo" aria-label="Yuvraj Dhage — home">
+      <span class="logo-node">
+        <span class="logo-node__text">YD</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#certifications" data-nav>Certs</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="nav__right">
+      <span class="status-pill">
+        <span class="status-dot"></span>
+        Open to job &amp; internship roles
+      </span>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <canvas id="meshCanvas"></canvas>
+      <div class="hero__scanlines"></div>
+      <div class="hero__vignette"></div>
+    </div>
+
+    <div class="hud hud--time" aria-hidden="true">
+      <span class="hud__label">LOCAL TIME · NAGPUR</span>
+      <span class="hud__value" id="hudTime">--:--:--</span>
+    </div>
+    <div class="hud hud--uptime" aria-hidden="true">
+      <span class="hud__label">SESSION UPTIME</span>
+      <span class="hud__value" id="hudUptime">00:00</span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__copy fade-up">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>SYSTEM STATUS — ONLINE</p>
+        <h1 class="hero__name">Yuvraj Dhage</h1>
+        <p class="hero__role">
+          <span id="typewriter" class="typewriter">Data Analyst</span>
+        </p>
+        <p class="hero__subtext">
+          I turn raw data and live sensor feeds into dashboards people actually trust —
+          blending Python, SQL and IoT telemetry into decisions that move fast.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero__panel fade-up" style="--delay: 0.15s">
+        <div class="terminal notch">
+          <div class="terminal__head">
+            <span class="terminal__dot"></span>
+            <span class="terminal__id">NODE: YUVRAJ_DHAGE</span>
+            <span class="terminal__tag">OPEN TO WORK</span>
+          </div>
+          <div class="terminal__divider"></div>
+          <dl class="terminal__rows">
+            <div class="terminal__row">
+              <dt>ROLE</dt>
+              <dd>B.Tech Graduate · IoT Developer &amp; Data Analyst</dd>
+            </div>
+            <div class="terminal__row">
+              <dt>BASE</dt>
+              <dd>Nagpur, Maharashtra, IN</dd>
+            </div>
+            <div class="terminal__row">
+              <dt>CGPA</dt>
+              <dd>7.63 / 10.00</dd>
+            </div>
+            <div class="terminal__row">
+              <dt>FOCUS</dt>
+              <dd>Data Analytics · IoT Systems · AI</dd>
+            </div>
+            <div class="terminal__row">
+              <dt>STATUS</dt>
+              <dd>Seeking Job &amp; Internship Roles</dd>
+            </div>
+          </dl>
+          <div class="terminal__divider"></div>
+          <div class="terminal__graph">
+            <span class="terminal__graph-label">MOMENTUM</span>
+            <svg viewBox="0 0 220 56" preserveAspectRatio="none" class="sparkline">
+              <defs>
+                <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="var(--trace)" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="var(--trace)" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <polyline points="0,46 30,42 60,44 90,30 120,33 150,18 180,20 220,6 220,56 0,56" fill="url(#sparkFill)" stroke="none"/>
+              <polyline class="sparkline__line" points="0,46 30,42 60,44 90,30 120,33 150,18 180,20 220,6" fill="none"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span><em>•</em>PYTHON</span><span><em>•</em>SQL</span><span><em>•</em>THINGSBOARD</span><span><em>•</em>MQTT</span><span><em>•</em>NODE-RED</span><span><em>•</em>POWER BI</span><span><em>•</em>DATA ANALYTICS</span><span><em>•</em>JAVASCRIPT</span>
+        <span><em>•</em>PYTHON</span><span><em>•</em>SQL</span><span><em>•</em>THINGSBOARD</span><span><em>•</em>MQTT</span><span><em>•</em>NODE-RED</span><span><em>•</em>POWER BI</span><span><em>•</em>DATA ANALYTICS</span><span><em>•</em>JAVASCRIPT</span>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section__inner about">
+      <div class="about__visual fade-up">
+        <div class="photo-frame notch tilt">
+          <img src="profile.jpg" alt="Yuvraj Dhage" class="photo-frame__img" loading="lazy">
+          <div class="photo-frame__scan"></div>
+          <span class="photo-frame__corner photo-frame__corner--tl"></span>
+          <span class="photo-frame__corner photo-frame__corner--br"></span>
+          <span class="photo-frame__tag">FEED: LIVE</span>
+        </div>
+      </div>
+
+      <div class="about__copy fade-up" style="--delay: 0.1s">
+        <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — ABOUT</p>
+        <h2 class="section__title">Data person. Builder of things that watch other things.</h2>
+        <p class="section__lede">
+          I'm a Data Science graduate (B.Tech) who likes turning messy numbers and live sensor
+          feeds into something a non-technical stakeholder can act on in five seconds. My toolkit
+          splits two ways: on one side, Python, SQL and Power BI for digging through data; on the
+          other, ThingsBoard, MQTT and Node-RED for building the real-time dashboards that watch
+          transformers, solar arrays and water systems in the field.
+        </p>
+        <p class="section__lede">
+          I recently wrapped up my B.Tech alongside an IoT Developer &amp; Data Analyst internship
+          at SenseLive Technologies, and I'm now actively looking for full-time roles or
+          internships in data analytics, IoT or AI — while still running tech sessions as a
+          Microsoft Learn Student Ambassador. I care about shipping things that actually get used,
+          not just things that look impressive in a notebook.
+        </p>
+
+        <div class="facts">
+          <div class="facts__item">
+            <span class="facts__label">EDUCATION</span>
+            <span class="facts__value">B.Tech, Data Science — GHRCE, 2023–2026 (Completed)</span>
+          </div>
+          <div class="facts__item">
+            <span class="facts__label">LATEST ROLE</span>
+            <span class="facts__value">IoT Developer &amp; Data Analyst Intern, SenseLive (Completed Jun 2026)</span>
+          </div>
+          <div class="facts__item">
+            <span class="facts__label">STATUS</span>
+            <span class="facts__value">Actively seeking Job / Internship opportunities</span>
+          </div>
+          <div class="facts__item">
+            <span class="facts__label">COMMUNITY</span>
+            <span class="facts__value">Microsoft Learn Student Ambassador</span>
+          </div>
+          <div class="facts__item">
+            <span class="facts__label">LOCATION</span>
+            <span class="facts__value">Nagpur, Maharashtra, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section--alt" id="skills">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — SKILLS</p>
+      <h2 class="section__title">The stack behind the dashboards.</h2>
+
+      <div class="skills fade-up">
+        <div class="skills__group notch">
+          <span class="skills__cat">Languages</span>
+          <div class="chips">
+            <span class="chip-tag">Python</span>
+            <span class="chip-tag">SQL</span>
+          </div>
+        </div>
+        <div class="skills__group notch">
+          <span class="skills__cat">Data &amp; Analysis</span>
+          <div class="chips">
+            <span class="chip-tag">NumPy</span>
+            <span class="chip-tag">Pandas</span>
+            <span class="chip-tag">Matplotlib</span>
+            <span class="chip-tag">Plotly</span>
+          </div>
+        </div>
+        <div class="skills__group notch">
+          <span class="skills__cat">Web Technologies</span>
+          <div class="chips">
+            <span class="chip-tag">HTML</span>
+            <span class="chip-tag">CSS</span>
+            <span class="chip-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skills__group notch">
+          <span class="skills__cat">Databases &amp; BI</span>
+          <div class="chips">
+            <span class="chip-tag">MySQL</span>
+            <span class="chip-tag">Power BI</span>
+            <span class="chip-tag">Excel</span>
+            <span class="chip-tag">DAX</span>
+          </div>
+        </div>
+        <div class="skills__group notch">
+          <span class="skills__cat">IoT &amp; Automation</span>
+          <div class="chips">
+            <span class="chip-tag">ThingsBoard</span>
+            <span class="chip-tag">MQTT</span>
+            <span class="chip-tag">Node-RED</span>
+          </div>
+        </div>
+        <div class="skills__group notch">
+          <span class="skills__cat">Core Foundations</span>
+          <div class="chips">
+            <span class="chip-tag">OOP</span>
+            <span class="chip-tag">DBMS</span>
+            <span class="chip-tag">Data Visualization</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills fade-up" style="--delay: 0.1s">
+        <span class="skills__cat">Also brings to the table</span>
+        <div class="chips">
+          <span class="chip-tag chip-tag--amber">Leadership</span>
+          <span class="chip-tag chip-tag--amber">Presentation Skills</span>
+          <span class="chip-tag chip-tag--amber">Problem Solving</span>
+          <span class="chip-tag chip-tag--amber">Communication</span>
+          <span class="chip-tag chip-tag--amber">Team Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — EXPERIENCE</p>
+      <h2 class="section__title">Where the work has happened.</h2>
+
+      <div class="timeline">
+        <div class="timeline__item fade-up">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card notch">
+            <div class="timeline__head">
+              <h3>IoT Developer &amp; Data Analyst Intern</h3>
+              <span class="timeline__date">Dec 2025 — Jun 2026</span>
+            </div>
+            <p class="timeline__org">SenseLive Technologies</p>
+            <ul class="timeline__list">
+              <li>Built and customized industrial IoT dashboards in ThingsBoard for real-time monitoring across transformer, solar and water-management systems.</li>
+              <li>Pulled in live telemetry over MQTT and designed interactive widgets with HTML, CSS and JavaScript.</li>
+              <li>Automated device communication and data processing using Node-RED flows.</li>
+              <li>Partnered across teams on visualization, analytics and system integration for multiple client projects.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip-tag">ThingsBoard</span>
+              <span class="chip-tag">MQTT</span>
+              <span class="chip-tag">Node-RED</span>
+              <span class="chip-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item fade-up" style="--delay: 0.08s">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card notch">
+            <div class="timeline__head">
+              <h3>Beta Student Ambassador</h3>
+              <span class="timeline__date">Jul 2024 — Jan 2026</span>
+            </div>
+            <p class="timeline__org">Microsoft Learn Student Ambassador</p>
+            <ul class="timeline__list">
+              <li>Run technical workshops on Microsoft Copilot, AI tools and productivity technologies for students.</li>
+              <li>Mentor peers on AI applications, cloud platforms and developer tooling.</li>
+              <li>Organize community learning events that grew engagement with Microsoft's developer programs.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip-tag">Microsoft Copilot</span>
+              <span class="chip-tag">Cloud Tools</span>
+              <span class="chip-tag">Community</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline__item fade-up" style="--delay: 0.16s">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card notch">
+            <div class="timeline__head">
+              <h3>Production Planning &amp; Control</h3>
+              <span class="timeline__date">2022 · 4 months</span>
+            </div>
+            <p class="timeline__org">GKN Sinter Metals</p>
+            <ul class="timeline__list">
+              <li>Coordinated production planning for powder-metallurgy parts spanning iron and copper-based components.</li>
+              <li>Worked cross-functionally with the production team to keep output on schedule.</li>
+              <li>Built early hands-on experience in process discipline and organizational problem-solving.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section section--alt" id="projects">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — PROJECTS</p>
+      <h2 class="section__title">Things I've actually shipped.</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card project-card--featured notch tilt fade-up">
+          <div class="project-card__top">
+            <span class="project-card__tag">IOT · REAL-TIME</span>
+            <span class="project-card__date">Dec 2025 — Jun 2026</span>
+          </div>
+          <h3>Solar &amp; Transformer Monitoring System</h3>
+          <p>Real-time monitoring suite for solar arrays and 3D transformer systems — live telemetry over MQTT, visualized through custom ThingsBoard widgets.</p>
+          <div class="chips">
+            <span class="chip-tag">ThingsBoard</span>
+            <span class="chip-tag">MQTT</span>
+            <span class="chip-tag">JavaScript</span>
+            <span class="chip-tag">HTML/CSS</span>
+          </div>
+        </article>
+
+        <article class="project-card notch tilt fade-up" style="--delay: 0.06s">
+          <div class="project-card__top">
+            <span class="project-card__tag">SQL · STREAMLIT</span>
+          </div>
+          <h3>Flight Dashboard — SQL Case Study</h3>
+          <p>Interactive dashboard turning raw flight records into a queryable, visual story — SQL on the backend, Streamlit up front.</p>
+          <div class="chips">
+            <span class="chip-tag">MySQL</span>
+            <span class="chip-tag">Python</span>
+            <span class="chip-tag">Pandas</span>
+            <span class="chip-tag">Plotly</span>
+            <span class="chip-tag">Streamlit</span>
+          </div>
+        </article>
+
+        <article class="project-card notch tilt fade-up" style="--delay: 0.12s">
+          <div class="project-card__top">
+            <span class="project-card__tag">POWER BI · SALES</span>
+            <span class="project-card__date">Jun – Jul 2023</span>
+          </div>
+          <h3>AtliQ Hardware — Sales Insights Dashboard</h3>
+          <p>Power BI dashboard for a hardware retailer's declining sales — modeled 10,000+ records with DAX to surface inventory and sales trends stakeholders could act on.</p>
+          <div class="chips">
+            <span class="chip-tag">Power BI</span>
+            <span class="chip-tag">Excel</span>
+            <span class="chip-tag">SQL</span>
+            <span class="chip-tag">DAX</span>
+          </div>
+        </article>
+
+        <article class="project-card notch tilt fade-up" style="--delay: 0.18s">
+          <div class="project-card__top">
+            <span class="project-card__tag">SQL · ANALYTICS</span>
+          </div>
+          <h3>SQL Case Studies — Zomato &amp; Swiggy</h3>
+          <p>Mined customer and order datasets from two food-delivery giants using joins, CTEs, window functions and subqueries to surface ordering patterns.</p>
+          <div class="chips">
+            <span class="chip-tag">MySQL</span>
+            <span class="chip-tag">Python</span>
+            <span class="chip-tag">Pandas</span>
+            <span class="chip-tag">Matplotlib</span>
+          </div>
+        </article>
+
+        <article class="project-card notch tilt fade-up" style="--delay: 0.24s">
+          <div class="project-card__top">
+            <span class="project-card__tag">PYTHON · DESKTOP</span>
+          </div>
+          <h3>BitShield — Secure News App</h3>
+          <p>Lightweight Python desktop app delivering real-time news through encrypted data transmission, wrapped in a clean Tkinter interface.</p>
+          <div class="chips">
+            <span class="chip-tag">Python</span>
+            <span class="chip-tag">Requests</span>
+            <span class="chip-tag">Tkinter</span>
+          </div>
+        </article>
+
+        <article class="project-card notch tilt fade-up" style="--delay: 0.3s">
+          <div class="project-card__top">
+            <span class="project-card__tag">EXCEL · RETAIL</span>
+            <span class="project-card__date">Jun 2023</span>
+          </div>
+          <h3>Vrinda Store — Annual Sales Report</h3>
+          <p>Built a 2022 annual sales report for a retail store, uncovering customer behavior patterns to help shape its 2023 sales strategy.</p>
+          <div class="chips">
+            <span class="chip-tag">Excel</span>
+            <span class="chip-tag">Power BI</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-cta fade-up">
+        <p>More of the code lives on GitHub.</p>
+        <a href="https://github.com/yuvrajdhage2003-dev" target="_blank" rel="noopener" class="btn btn--ghost">Explore my GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="section" id="certifications">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — CERTIFICATIONS</p>
+      <h2 class="section__title">Proof of the reps put in.</h2>
+
+      <div class="certs fade-up">
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">Microsoft Learn Student Ambassador</p>
+            <p class="cert-badge__issuer">Alpha &amp; Beta Certified — Microsoft</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">Google Developer Student Clubs</p>
+            <p class="cert-badge__issuer">Certified Volunteer &amp; Python Programmer</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">Python Programming</p>
+            <p class="cert-badge__issuer">GUVI</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">AI for India</p>
+            <p class="cert-badge__issuer">GUVI</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">Python Certification</p>
+            <p class="cert-badge__issuer">Udemy</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">MLSA Swag Kit Recipient</p>
+            <p class="cert-badge__issuer">Received from Microsoft HQ, Washington, USA</p>
+          </div>
+        </div>
+        <div class="cert-badge notch">
+          <span class="cert-badge__icon"><span></span></span>
+          <div>
+            <p class="cert-badge__title">LinkedIn Premium Award</p>
+            <p class="cert-badge__issuer">Recognition for community contribution</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section--alt" id="contact">
+    <div class="section__inner">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>MODULE — CONTACT</p>
+      <h2 class="section__title">Let's build something that ships.</h2>
+      <p class="section__lede contact__lede">
+        Open to data analyst, IoT and AI-related roles, internships and collaborations —
+        based in Nagpur, happy to work remote.
+      </p>
+
+      <div class="contact-grid fade-up">
+        <a href="mailto:yuvrajdhage2003@gmail.com?subject=Let%27s%20Connect" class="contact-card notch">
+          <span class="contact-card__label">EMAIL</span>
+          <span class="contact-card__value">yuvrajdhage2003@gmail.com</span>
+        </a>
+        <div class="contact-card notch">
+          <span class="contact-card__label">LOCATION</span>
+          <span class="contact-card__value">Nagpur, Maharashtra, IN</span>
+        </div>
+      </div>
+
+      <div class="social-row fade-up" style="--delay: 0.1s">
+        <a href="https://github.com/yuvrajdhage2003-dev" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.9.57.1.78-.25.78-.55v-2.14c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.77 1.07.77 2.15v3.19c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yuvraj-dhage-48097824b/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="https://www.kaggle.com/yuvrajdhage" target="_blank" rel="noopener" class="social-link" aria-label="Kaggle">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.7 21.3h-3.4a.7.7 0 0 1-.56-.28l-5-6.4-1.4 1.34v4.6a.74.74 0 0 1-.75.74H4.84a.74.74 0 0 1-.75-.74V2.74c0-.4.34-.74.75-.74h2.75c.4 0 .74.34.74.74v11.6l5.9-5.97a.8.8 0 0 1 .57-.25h3.6c.3 0 .56.18.67.46.12.28.06.6-.15.82l-6.27 6.2 6.97 8.6c.2.24.24.56.1.84a.74.74 0 0 1-.67.4Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Yuvraj Dhage — designed &amp; built from scratch with HTML, CSS &amp; JavaScript.</p>
+  <a href="#top" class="footer__top" aria-label="Back to top">↑ Top</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
